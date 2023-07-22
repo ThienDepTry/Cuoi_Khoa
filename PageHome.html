@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        [x-cloak] {
+            display: none
+        }
+    </style>
+    <!-- Include the Alpine library on your page -->
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <!-- Include the TailwindCSS library on your page -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon"
+        href="https://w7.pngwing.com/pngs/394/518/png-transparent-brown-shiba-inu-doge-weather-shiba-inu-doge-click-doge-snake-doge-miscellaneous-mammal-carnivoran-thumbnail.png"
+        type="image/x-icon" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./PageHome.css">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./Register.html">
+    <link rel="stylesheet" href="./Login.html">
+    <link rel="stylesheet" href="./data.js">
+    <link rel="stylesheet" href="./index.js">
+
+    <script>
+        const isLogin = localStorage.getItem("isLogin");
+
+        if (!isLogin) {
+            // Nếu trang yêu cầu bắt buộc phải đăng nhập thì thông báo và chuyển hướng
+            alert("Bạn chưa đăng nhập");
+            window.location.href = "/Cuối%20khóa%202/Register.html";
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- News -->
+    <section class="w-full px-6 pb-12 antialiased bg-white">
+        <div class="mx-auto max-w-7xl">
+            <!-- Main Hero Content -->
+            <div
+                class="container max-w-sm py-32 mx-auto mt-px text-left sm:max-w-md md:max-w-lg sm:px-4 md:max-w-none md:text-center">
+                <h1
+                    class="text-3xl font-bold leading-10 tracking-tight text-left text-gray-900 md:text-center sm:text-4xl md:text-7xl lg:text-8xl">
+                    <br class="hidden sm:block"> Accurate news (Very sure :D)
+                </h1>
+                <div class="mx-auto mt-5 text-gray-400 md:mt-8 md:max-w-lg md:text-center md:text-xl">Please help, we
+                    are so poor ._. , help in "Support us"</div>
+            </div>
+            <!-- End Main Hero Content -->
+
+        </div>
+    </section>
+
+
+    <section class="bg-white">
+        <div class="w-full px-5 py-6 mx-auto space-y-5 sm:py-8 md:py-12 sm:space-y-8 md:space-y-16 max-w-7xl">
+            <div id="app" class="flex grid grid-cols-12 pb-10 sm:px-5 gap-x-8 gap-y-16">
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <script src="./data.js"></script>
+    <script src="./index.js"></script>
+
+    <!-- Navbar -->
+    <section id="navbar">
+        <nav id="fullNav">
+            <div class="navbar-container">
+                <!-- Logo -->
+                <a class="navbar-logo" href="#">
+                    <img src="./pixil-frame-0.png" alt="Logo" />
+                </a>
+
+                <!-- Menu và ngôn ngữ -->
+                <div class="navbar-menu-lang">
+                    <!-- Menu -->
+                    <ul class="navbar-menu">
+                        <!-- Update lại phần HTML cho item đầu tiên -->
+                        <li class="navbar-menu-item has-megamenu">
+                            <a href="#">Login</a>
+                            <svg class="megamenu-indicator" viewBox="0 0 448 512" width="12px" height="12px"
+                                fill="#313131">
+                                <path
+                                    d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                            </svg>
+                            <div class="megamenu">
+                                <div class="megamenu-col">
+                                    <ul class="megamenu-col-items">
+                                        <li class="megamenu-col-item">
+                                            <a href="./Register.html">Register</a>
+                                        </li>
+                                        <li class="megamenu-col-item">
+                                            <a href="./Login.html">Login</a>
+                                        </li>
+                                        <li class="megamenu-col-item">
+                                            <input id="log-out" type="button" value="Log out">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="navbar-menu-item">
+                            <a href="#">Something Else</a>
+                        </li>
+                        <li class="navbar-menu-item">
+                            <a href="./Support us.html">Support us</a>
+                        </li>
+                        <li class="navbar-menu-item">
+                            <a href="#">Event</a>
+                        </li>
+                        <li class="navbar-menu-item">
+                            <a href="#">About us</a>
+                        </li>
+                    </ul>
+
+                    <!-- Ngôn ngữ -->
+                    <div class="navbar-lang">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                            fill="#000000">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path
+                                d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z">
+                            </path>
+                        </svg>
+
+                        <a href="#">EN</a>
+                        |
+                        <a href="#">VI</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <!-- Header (banner) -->
+    <section id="header"></section>
+
+    <!-- Intro -->
+    <section id="intro"></section>
+
+    <!-- Benefit (facts + companies) -->
+    <section id="benefit"></section>
+
+    <!-- Courses -->
+    <section id="courses"></section>
+
+    <!-- Selling points -->
+    <section id="selling-points"></section>
+
+    <!-- Honored students -->
+    <section id="honored"></section>
+
+    <!-- Media appearances -->
+    <section id="media"></section>
+
+    <!-- Events -->
+    <section id="events"></section>
+
+    <!-- Footer -->
+    <section id="footer"></section>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const log_out = document.getElementById("log-out");
+
+            log_out?.addEventListener("click", function () {
+                // Xóa thông tin đăng nhập trong Local Storage
+                localStorage.removeItem("isLogin");
+                alert("Đăng xuất thành công");
+                window.location.reload();
+            });
+        });
+    </script>
+</body>
+
+</html>
+</body>
+
+</html>
