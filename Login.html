@@ -2,79 +2,26 @@
 <html lang="en">
 
 <head>
-    <style>
-        [x-cloak] {
-            display: none
-        }
-    </style>
-    <!-- Include the Alpine library on your page -->
-    <script src="https://unpkg.com/alpinejs" defer></script>
-    <!-- Include the TailwindCSS library on your page -->
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon"
         href="https://w7.pngwing.com/pngs/394/518/png-transparent-brown-shiba-inu-doge-weather-shiba-inu-doge-click-doge-snake-doge-miscellaneous-mammal-carnivoran-thumbnail.png"
         type="image/x-icon" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="./PageHome.css">
+    <title>Login</title>
     <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./Login,Register.css">
     <link rel="stylesheet" href="./Register.html">
-    <link rel="stylesheet" href="./Login.html">
-    <link rel="stylesheet" href="./data.js">
-    <link rel="stylesheet" href="./index.js">
-
-    <script>
-        const isLogin = localStorage.getItem("isLogin");
-
-        if (!isLogin) {
-            // Nếu trang yêu cầu bắt buộc phải đăng nhập thì thông báo và chuyển hướng
-            alert("Bạn chưa đăng nhập");
-            window.location.href = "/Register.html";
-        }
-    </script>
-
+    <link rel="stylesheet" href="./PageHome.html">
 </head>
 
 <body>
-    <!-- News -->
-    <section class="w-full px-6 pb-12 antialiased bg-white">
-        <div class="mx-auto max-w-7xl">
-            <!-- Main Hero Content -->
-            <div
-                class="container max-w-sm py-32 mx-auto mt-px text-left sm:max-w-md md:max-w-lg sm:px-4 md:max-w-none md:text-center">
-                <h1
-                    class="text-3xl font-bold leading-10 tracking-tight text-left text-gray-900 md:text-center sm:text-4xl md:text-7xl lg:text-8xl">
-                    <br class="hidden sm:block"> Accurate news (Very sure :D)
-                </h1>
-                <div class="mx-auto mt-5 text-gray-400 md:mt-8 md:max-w-lg md:text-center md:text-xl">Please help, we
-                    are so poor ._. , help in "Support us"</div>
-            </div>
-            <!-- End Main Hero Content -->
-
-        </div>
-    </section>
 
 
-    <section class="bg-white">
-        <div class="w-full px-5 py-6 mx-auto space-y-5 sm:py-8 md:py-12 sm:space-y-8 md:space-y-16 max-w-7xl">
-            <div id="app" class="flex grid grid-cols-12 pb-10 sm:px-5 gap-x-8 gap-y-16">
-
-
-            </div>
-        </div>
-    </section>
-
-
-    <script src="./data.js"></script>
-    <script src="./index.js"></script>
-
-    <!-- Navbar -->
     <section id="navbar">
         <nav id="fullNav">
             <div class="navbar-container">
                 <!-- Logo -->
-                <a class="navbar-logo" href="#">
+                <a class="navbar-logo" href="./PageHome.html">
                     <img src="./pixil-frame-0.png" alt="Logo" />
                 </a>
 
@@ -107,10 +54,10 @@
                             </div>
                         </li>
                         <li class="navbar-menu-item">
-                            <a href="#">Something Else</a>
+                            <a href="/Cuối%20khóa%202/Support%20us.html">Support us</a>
                         </li>
                         <li class="navbar-menu-item">
-                            <a href="./Support us.html">Support us</a>
+                            <a href="#">News</a>
                         </li>
                         <li class="navbar-menu-item">
                             <a href="#">Event</a>
@@ -139,49 +86,59 @@
         </nav>
     </section>
 
-    <!-- Header (banner) -->
-    <section id="header"></section>
+    <div id="wrapper">
+        <form id="form-login" method="post">
+            <h1 class="form-heading">Login</h1>
+            <div class="form-group">
+                <input id="username" type="text" class="form-input" placeholder="Username">
+            </div>
 
-    <!-- Intro -->
-    <section id="intro"></section>
+            <div class="form-group">
+                <input id="password" type="password" class="form-input" placeholder="Password">
+            </div>
 
-    <!-- Benefit (facts + companies) -->
-    <section id="benefit"></section>
+            <div class="D">
+                <p>Don't have an account?</p>
+                <a id="a" href="./Register.html">Register</a>
+            </div>
 
-    <!-- Courses -->
-    <section id="courses"></section>
+            <input type="submit" value="Sign up" class="form-submit">
+        </form>
+    </div>
 
-    <!-- Selling points -->
-    <section id="selling-points"></section>
-
-    <!-- Honored students -->
-    <section id="honored"></section>
-
-    <!-- Media appearances -->
-    <section id="media"></section>
-
-    <!-- Events -->
-    <section id="events"></section>
-
-    <!-- Footer -->
-    <section id="footer"></section>
-
-    <!-- Scripts -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const log_out = document.getElementById("log-out");
 
-            log_out?.addEventListener("click", function () {
-                // Xóa thông tin đăng nhập trong Local Storage
-                localStorage.removeItem("isLogin");
-                alert("Đăng xuất thành công");
-                window.location.reload();
+        document.addEventListener("DOMContentLoaded", function () {
+            const form_login = document.getElementById("form-login");
+
+            form_login?.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+
+                // Lấy giá trị của các input
+                const username = document.getElementById("username").value;
+                const password = document.getElementById("password").value;
+
+
+                // Lấy thông tin đăng ký từ Local Storage
+                const registeredUsername = localStorage.getItem("username");
+                const registeredPassword = localStorage.getItem("password");
+
+                // Kiểm tra username và password có khớp với thông tin đăng ký hay không
+                if (username !== registeredUsername || password !== registeredPassword) {
+                    alert("Thông tin đăng nhập không chính xác");
+                    return;
+                }
+
+                // Thông báo đăng nhập thành công và lưu thông tin đăng nhập vào Local Storage
+                localStorage.setItem("isLogin", true);
+                alert("Đăng nhập thành công");
+                window.location.href = "/Cuối%20khóa%202/PageHome.html";
             });
         });
-    </script>
-</body>
 
-</html>
+
+    </script>
 </body>
 
 </html>
