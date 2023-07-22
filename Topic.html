@@ -7,15 +7,23 @@
         type="image/x-icon" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Support us</title>
+    <link rel="stylesheet" href="./PageHome.css">
     <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./Login,Register.css">
+    <link rel="stylesheet" href="./Register.html">
     <link rel="stylesheet" href="./Login.html">
-    <link rel="stylesheet" href="./PageHome.html">
+    <script>
+        const isLogin = localStorage.getItem("isLogin");
+
+        if (!isLogin) {
+            // Nếu trang yêu cầu bắt buộc phải đăng nhập thì thông báo và chuyển hướng
+            alert("Bạn chưa đăng nhập");
+            window.location.href = "/Register.html";
+        }
+    </script>
 </head>
 
 <body>
-
     <section id="navbar">
         <nav id="fullNav">
             <div class="navbar-container">
@@ -53,7 +61,7 @@
                             </div>
                         </li>
                         <li class="navbar-menu-item">
-                            <a href="/Cuối%20khóa%202/Support%20us.html">Support us</a>
+                            <a href="./Support us.html">Support us</a>
                         </li>
                         <li class="navbar-menu-item">
                             <a href="#">News</a>
@@ -84,59 +92,6 @@
             </div>
         </nav>
     </section>
-
-    <div id="wrapper">
-        <form id="form-login" method="post">
-            <h1 class="form-heading">Register</h1>
-            <div class="form-group">
-                <input id="username" type="text" class="form-input" placeholder="Username">
-            </div>
-
-            <div class="form-group">
-                <input id="password" type="password" class="form-input" placeholder="Password">
-            </div>
-
-            <div class="form-group">
-                <input placeholder="Confirm-password" class="form-input" type="password" id="confirm-password" />
-            </div>
-
-            <div class="D">
-                <p>Have an account?</p>
-                <a id="a" href="./Login.html">Login</a>
-            </div>
-
-            <input type="submit" value="Sign up" class="form-submit">
-        </form>
-    </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const form_login = document.getElementById("form-login");
-
-            form_login?.addEventListener("submit", function (event) {
-                event.preventDefault();
-
-
-                // Lấy giá trị của các input
-                const username = document.getElementById("username").value;
-                const password = document.getElementById("password").value;
-                const confirmPassword = document.getElementById("confirm-password").value;
-
-                // Kiểm tra password và confirm password có giống nhau hay không
-                if (password !== confirmPassword) {
-                    alert("Mật khẩu không khớp");
-                    return;
-                }
-
-                // Lưu thông tin đăng ký vào Local Storage
-
-                localStorage.setItem("username", username);
-                localStorage.setItem("password", password);
-                alert("Đăng ký thành công");
-                window.location.href = "/Login.html";
-            });
-        });
-    </script>
 </body>
 
 </html>

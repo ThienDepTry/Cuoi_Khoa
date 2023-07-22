@@ -262,3 +262,7 @@ nav {
 .megamenu .megamenu-col-item a:hover {
     color: #ff0000;
 }
+
+#title_news {
+    font-size: 60px;
+}
