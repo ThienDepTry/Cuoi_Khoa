@@ -2,13 +2,22 @@
 <html lang="en">
 
 <head>
+    <style>
+        [x-cloak] {
+            display: none
+        }
+    </style>
+    <!-- Include the Alpine library on your page -->
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <!-- Include the TailwindCSS library on your page -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon"
         href="https://w7.pngwing.com/pngs/394/518/png-transparent-brown-shiba-inu-doge-weather-shiba-inu-doge-click-doge-snake-doge-miscellaneous-mammal-carnivoran-thumbnail.png"
         type="image/x-icon" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support us</title>
-    <link rel="stylesheet" href="./PageHome.css">
+    <link rel="stylesheet" href="./Topic.css">
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./Register.html">
     <link rel="stylesheet" href="./Login.html">
@@ -61,16 +70,16 @@
                             </div>
                         </li>
                         <li class="navbar-menu-item">
-                            <a href="./Support us.html">Support us</a>
+                            <a href="./Topic.html">Topic</a>
                         </li>
                         <li class="navbar-menu-item">
-                            <a href="#">News</a>
+                            <a href="./Support us.html">Support us</a>
                         </li>
                         <li class="navbar-menu-item">
                             <a href="#">Event</a>
                         </li>
                         <li class="navbar-menu-item">
-                            <a href="#">About us</a>
+                            <a href="./AboutUs.html">About us</a>
                         </li>
                     </ul>
 
@@ -92,6 +101,75 @@
             </div>
         </nav>
     </section>
+
+    <!--Main-->
+    <section style="padding-top: 120px;" class="relative w-full bg-white">
+        <div class="absolute w-full h-32 bg-gradient-to-b from-gray-100 to-white"></div>
+        <div class="relative w-full px-5 py-10 mx-auto sm:py-12 md:py-16 md:px-10 max-w-7xl">
+
+            <h1 class="mb-1 text-4xl font-extrabold leading-none text-gray-900 lg:text-5xl xl:text-6xl sm:mb-3"><a
+                    href="#_">CHỦ ĐỀ</a></h1>
+            <p class="text-lg font-medium text-gray-500 sm:text-2xl">Những chủ để khác nhau, bạn có thể dễ dàng tìm kiếm
+                hơn</p>
+            <div class="flex grid h-full grid-cols-12 gap-10 pb-10 mt-8 sm:mt-16">
+                <div
+                    class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 xl:col-span-4">
+                    <a href="#_"
+                        class="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110"
+                        style="background-image: url(./earth.jpg);">
+                    </a>
+                    <div
+                        class="relative z-20 w-full h-auto py-8 text-white bg-purple-500 border-t-0 border-yellow-200 px-7">
+                        <a href="#_"
+                            class="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-purple-500 bg-white">Khám
+                            phá</a>
+                        <h2 class="mb-5 text-5xl font-bold"><a href="#_">KHÁM PHÁ THẾ GIỚI
+                            </a></h2>
+                        <p class="mb-2 text-lg font-normal text-purple-100 opacity-100">Những địa điểm du lịch nổi tiếng
+                            ở khắp nơi</p>
+
+                    </div>
+                </div>
+
+                <div
+                    class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 xl:col-span-4">
+                    <a href="#_"
+                        class="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110"
+                        style="background-image:url('https://cdn.devdojo.com/images/may2021/orange.jpg')">
+                    </a>
+                    <div
+                        class="relative z-20 w-full h-auto py-8 text-white bg-blue-400 border-t-0 border-yellow-200 px-7">
+                        <a href="#_"
+                            class="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-blue-500 bg-white">CON
+                            NGƯỜI</a>
+                        <h2 class="mb-5 text-5xl font-bold"><a href="#_">LỐI SỐNG LÀNH MẠNH</a></h2>
+                        <p class="mb-2 text-lg font-normal text-blue-100 opacity-100">Sống một lối sống lành mạnh hơn sẽ
+                            giúp ích cho cơ thể của bạn</p>
+
+                    </div>
+                </div>
+
+                <div
+                    class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group sm:col-span-12 xl:col-span-4 sm:flex-row xl:flex-col">
+                    <a href="#"
+                        class="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110"
+                        style="background-image:url('https://static-images.vnncdn.net/files/publish/2022/9/12/302452013-777027326905627-1746319390273829163-n-542.jpg')"></a>
+                    <div
+                        class="relative z-20 flex flex-col items-start justify-center w-full h-auto py-8 text-white bg-yellow-400 border-t-0 border-yellow-200 sm:h-full xl:h-auto px-7">
+                        <a href="#_"
+                            class="inline-block text-xs font-semibold absolute sm:mb-5 xl:mb-0 sm:relative xl:absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-yellow-400 bg-white">THỜI
+                            TIẾT</a>
+                        <h2 class="mb-5 text-5xl font-bold"><a href="#_">DỰ BÁO THỜI TIẾT
+                            </a></h2>
+                        <p class="mb-2 text-lg font-normal opacity-100 text-yellow-50">Bão, động đất, lốc xoáy mọi thứ
+                            đều ở đây</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
 
 </html>

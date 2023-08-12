@@ -2,16 +2,28 @@
 <html lang="en">
 
 <head>
+    <style>
+        [x-cloak] {
+            display: none
+        }
+    </style>
+    <!-- Include the Alpine library on your page -->
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <!-- Include the TailwindCSS library on your page -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon"
         href="https://w7.pngwing.com/pngs/394/518/png-transparent-brown-shiba-inu-doge-weather-shiba-inu-doge-click-doge-snake-doge-miscellaneous-mammal-carnivoran-thumbnail.png"
         type="image/x-icon" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support us</title>
-    <link rel="stylesheet" href="./Support us.css">
+    <title>About us</title>
+    <link rel="stylesheet" href="./PageHome.css">
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./Register.html">
     <link rel="stylesheet" href="./Login.html">
+    <link rel="stylesheet" href="./data.js">
+    <link rel="stylesheet" href="./index.js">
+
     <script>
         const isLogin = localStorage.getItem("isLogin");
 
@@ -21,6 +33,7 @@
             window.location.href = "/Register.html";
         }
     </script>
+
 </head>
 
 <body>
@@ -70,7 +83,7 @@
                             <a href="#">Event</a>
                         </li>
                         <li class="navbar-menu-item">
-                            <a href="./AboutUs.html">About us</a>
+                            <a href="#">About us</a>
                         </li>
                     </ul>
 
@@ -92,15 +105,54 @@
             </div>
         </nav>
     </section>
-    <section id="main">
-        <div id="title">
-            <h1>Support us</h1>
-            <p>I am very poor (very sure :D)</p>
-            <p>STK NGÂN HÀNG: 58010000242208 :D</p>
+
+    <section style="margin-top: 300px;" class="m-4 md:m-8 dark:bg-gray-800 dark:text-gray-100">
+        <div class="container p-4 mx-auto my-6 space-y-1 text-center">
+            <span class="text-xs font-semibold tracki uppercase dark:text-violet-400"></span>
+            <h2 class="pb-3 text-3xl font-bold md:text-4xl">Về chúng tôi</h2>
+            <p>Những ai đã làm gì, hỗ trợ gì, ...</p>
         </div>
-        <img id="img"
-            src="https://inkythuatso.com/uploads/thumbnails/800/2023/01/8-anh-meme-meo-gio-tay-inkythuatso-17-15-30-30.jpg"
-            alt="">
+        <div class="container grid justify-center gap-4 mx-auto lg:grid-cols-2 xl:grid-cols-4">
+            <div class="flex flex-col px-8 py-6">
+                <h2 class="mb-2 text-lg font-semibold sm:text-xl title-font dark:text-gray-100">Code</h2>
+                <p class="flex-1 mb-4 text-base leadi dark:text-gray-400">Tôi</p>
+                        <path fill-rule="evenodd"
+                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="flex flex-col px-8 py-6 lg:border-none xl:border-solid">
+                <h2 class="mb-2 text-lg font-semibold sm:text-xl title-font dark:text-gray-100">Ý tưởng </h2>
+                <p class="flex-1 mb-4 text-base leadi dark:text-gray-400">Tôi</p>
+                <a class="inline-flex items-center space-x-2 text-sm dark:text-violet-400" href="/sections">
+                        <path fill-rule="evenodd"
+                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="flex flex-col px-8 py-6">
+                <h2 class="mb-2 text-lg font-semibold sm:text-xl title-font dark:text-gray-100">Nguồn</h2>
+                <p class="flex-1 mb-4 text-base leadi dark:text-gray-400">Google</p>
+                <a class="inline-flex items-center space-x-2 text-sm dark:text-violet-400" href="/templates">
+                        <path fill-rule="evenodd"
+                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="flex flex-col px-8 py-6">
+                <h2 class="mb-2 text-lg font-semibold sm:text-xl title-font dark:text-gray-100">Mọi thứ</h2>
+                <p class="flex-1 mb-4 text-base leadi dark:text-gray-400">Tôi</p>
+                <a class="inline-flex items-center space-x-2 text-sm dark:text-violet-400" href="/docs">
+                        <path fill-rule="evenodd"
+                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
     </section>
 </body>
 

@@ -1,3 +1,11 @@
+#a {
+    color: #0abde3;
+}
+
+#log-out {
+    margin-top: 10px;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -38,8 +46,7 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-    background: url(https://tophinhanhdep.com/wp-content/uploads/2021/10/HD-Nature-Laptop-Wallpapers.jpg);
-    background-size: cover;
+    background-color: #ced6e0;
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
@@ -103,7 +110,6 @@ nav {
     /* Khai báo top = 0 để navbar luôn ở cạnh trên của màn hình */
     top: 0;
     z-index: 10;
-    background-color: #fff;
     /* Thêm một chút đổ bóng */
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
@@ -204,7 +210,7 @@ nav {
 
 /* Đổi màu chữ khi hover */
 .navbar-menu-item>a:hover {
-    color: #40a9ff;
+    color: #f50b0b;
 }
 
 /* Megamenu */
@@ -263,16 +269,6 @@ nav {
     color: #ff0000;
 }
 
-#title_news {
-    font-size: 60px;
-}
-
-#Firttitle {
-    padding: 0;
-    margin-top: 100px;
-}
-
-.py-24 {
-    padding-top: 5rem;
-    padding-bottom: 2rem;
+.mb-1 text-4xl font-extrabold leading-none text-gray-900 lg:text-5xl xl:text-6xl sm:mb-3 {
+    margin-top: 112px;
 }
