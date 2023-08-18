@@ -38,7 +38,7 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-    background: url(https://tophinhanhdep.com/wp-content/uploads/2021/10/HD-Nature-Laptop-Wallpapers.jpg);
+    background-color: #ffff;
     background-size: cover;
     min-height: 100vh;
     text-rendering: optimizeSpeed;
