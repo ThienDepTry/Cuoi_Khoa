@@ -102,6 +102,19 @@
             src="https://inkythuatso.com/uploads/thumbnails/800/2023/01/8-anh-meme-meo-gio-tay-inkythuatso-17-15-30-30.jpg"
             alt="">
     </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const log_out = document.getElementById("log-out");
+
+            log_out?.addEventListener("click", function () {
+                // Xóa thông tin đăng nhập trong Local Storage
+                localStorage.removeItem("isLogin");
+                alert("Đăng xuất thành công");
+                window.location.reload();
+            });
+        });
+    </script>
 </body>
 
 </html>
